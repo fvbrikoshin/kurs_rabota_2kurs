@@ -38,7 +38,7 @@ df |>
 ggsave(plot = plot, "value2.png", bg = "white", width = 12, height = 9)
 
 df |>
-  distinct(language, idiom)
+  distinct(language, idiom) |>
   filter(meaning_translation != "НЕИЗВЕСТНО") |>
   select(language, meaning_translation, `value3 (god)`) |>
   rename(feature = `value3 (god)`) |>
